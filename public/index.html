@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTT League</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="loginScreen" class="login-screen">
+      <div class="login-card">
+        <div class="brand-row">
+          <div class="brand-badge">TT</div>
+          <div>
+            <p class="eyebrow">Premium arena</p>
+            <h1>TTT League</h1>
+          </div>
+        </div>
+
+        <form id="authForm">
+          <label>
+            Email
+            <input id="emailInput" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Username
+            <input id="usernameInput" type="text" placeholder="player_one" required />
+          </label>
+          <label>
+            Password
+            <input id="passwordInput" type="password" placeholder="Your password" required />
+          </label>
+          <label>
+            Profile picture URL
+            <input id="avatarInput" type="url" placeholder="https://..." />
+          </label>
+          <button id="accessArenaBtn" type="submit" class="primary">Access arena</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="gameApp" class="page-shell hidden">
+      <aside class="sidebar">
+        <div class="card profile-card" id="profileCard">
+          <div class="profile-header">
+            <img id="profileAvatar" src="" alt="Profile" />
+            <div>
+              <h3 id="profileName">Player</h3>
+              <p id="profileEmail">user@example.com</p>
+            </div>
+          </div>
+          <div class="stats-row">
+            <div><span id="profileWins">0</span><small>Wins</small></div>
+            <div><span id="profileDraws">0</span><small>Draws</small></div>
+            <div><span id="profileLosses">0</span><small>Losses</small></div>
+          </div>
+          <button id="changeAvatarBtn" class="secondary small-btn">Change photo</button>
+        </div>
+
+        <div class="card leaderboard-card">
+          <h2>Global leaderboard</h2>
+          <div id="leaderboardList" class="leaderboard-list"></div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <div class="card controls-card">
+          <div class="controls-header">
+            <h2>Play</h2>
+            <button id="toggleFriendPanelBtn" class="secondary">Add friends</button>
+          </div>
+
+          <div class="action-row">
+            <button id="randomMatchBtn" class="primary">Random opponent</button>
+            <button id="botBtn">Play bot</button>
+            <button id="resignBtn" class="danger">Resign</button>
+          </div>
+
+          <div id="friendPanel" class="friend-panel collapsed">
+            <div class="input-row">
+              <input id="friendUsernameInput" type="text" placeholder="Friend username or email" />
+              <button id="addFriendBtn">Add friend</button>
+            </div>
+            <div class="input-row">
+              <input id="inviteEmailInput" type="text" placeholder="Challenge a friend" />
+              <button id="inviteFriendBtn">Send invite</button>
+            </div>
+          </div>
+
+          <div class="lists-grid">
+            <div class="list-panel">
+              <h3>Friends</h3>
+              <div id="friendList" class="mini-list"></div>
+            </div>
+            <div class="list-panel">
+              <h3>Invites</h3>
+              <div id="inviteList" class="mini-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card board-card">
+          <div class="status-row">
+            <div id="statusBanner" class="status-banner">Sign in to start playing.</div>
+            <div id="clockDisplay" class="clock">01:00</div>
+          </div>
+
+          <div id="gameBoard" class="game-board" aria-label="Tic tac toe board">
+            <button class="cell" data-index="0" aria-label="Cell 1"></button>
+            <button class="cell" data-index="1" aria-label="Cell 2"></button>
+            <button class="cell" data-index="2" aria-label="Cell 3"></button>
+            <button class="cell" data-index="3" aria-label="Cell 4"></button>
+            <button class="cell" data-index="4" aria-label="Cell 5"></button>
+            <button class="cell" data-index="5" aria-label="Cell 6"></button>
+            <button class="cell" data-index="6" aria-label="Cell 7"></button>
+            <button class="cell" data-index="7" aria-label="Cell 8"></button>
+            <button class="cell" data-index="8" aria-label="Cell 9"></button>
+          </div>
+
+          <div id="turnInfo" class="turn-info">Waiting for account sign-in.</div>
+        </div>
+      </main>
+    </div>
+
+    <div id="profileModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-panel">
+        <div class="modal-header">
+          <button id="profileModalClose" class="close-btn" aria-label="Close profile">×</button>
+        </div>
+        <div class="modal-body">
+          <img id="profileModalAvatar" src="" alt="Profile" />
+          <div class="modal-meta">
+            <h3 id="profileModalName">Player</h3>
+            <p id="profileModalEmail">user@example.com</p>
+            <div class="modal-stats">
+              <span><strong id="profileModalWins">0</strong> Wins</span>
+              <span><strong id="profileModalDraws">0</strong> Draws</span>
+              <span><strong id="profileModalLosses">0</strong> Losses</span>
+            </div>
+          </div>
+        </div>
+        <div class="match-history-panel">
+          <h4>Recent matches</h4>
+          <div id="profileModalHistory" class="history-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>

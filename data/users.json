@@ -1,0 +1,92 @@
+{
+  "hanfterr@gmail.com": {
+    "email": "hanfterr@gmail.com",
+    "name": "hanfterr",
+    "avatar": "https://down-ph.img.susercontent.com/file/sg-11134201-8261j-mknfzfn6169y76",
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "friends": []
+  },
+  "hanft@gmail.com": {
+    "email": "hanft@gmail.com",
+    "name": "ap",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=hanft%40gmail.com",
+    "wins": 1,
+    "losses": 1,
+    "draws": 0,
+    "friends": []
+  },
+  "bannana@gmail.com": {
+    "email": "bannana@gmail.com",
+    "username": "icecream",
+    "name": "icecream",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=bannana%40gmail.com",
+    "password": "carts",
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "friends": []
+  },
+  "apple@gmail.com": {
+    "email": "apple@gmail.com",
+    "username": "icecreammman",
+    "name": "icecreammman",
+    "avatar": "https://down-ph.img.susercontent.com/file/sg-11134201-8261j-mknfzfn6169y76",
+    "password": "carts",
+    "wins": 0,
+    "losses": 1,
+    "draws": 0,
+    "friends": [
+      "poo@gmail.com"
+    ],
+    "matchHistory": [
+      {
+        "id": "game_1794775374736_h8qah0",
+        "date": "2026-11-15T20:43:22.917Z",
+        "opponent": "boonanma@gmail.com",
+        "opponentName": "eeee",
+        "opponentAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=boonanma%40gmail.com",
+        "result": "loss",
+        "reason": "win",
+        "label": "Loss"
+      }
+    ]
+  },
+  "poo@gmail.com": {
+    "email": "poo@gmail.com",
+    "username": "aok",
+    "name": "aok",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=poo%40gmail.com",
+    "password": "cats",
+    "wins": 0,
+    "losses": 0,
+    "draws": 0,
+    "friends": [
+      "apple@gmail.com"
+    ]
+  },
+  "boonanma@gmail.com": {
+    "email": "boonanma@gmail.com",
+    "username": "eeee",
+    "name": "eeee",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=boonanma%40gmail.com",
+    "password": "catsp",
+    "wins": 1,
+    "losses": 0,
+    "draws": 0,
+    "friends": [],
+    "matchHistory": [
+      {
+        "id": "game_1794775374736_h8qah0",
+        "date": "2026-11-15T20:43:22.917Z",
+        "opponent": "apple@gmail.com",
+        "opponentName": "icecreammman",
+        "opponentAvatar": "https://down-ph.img.susercontent.com/file/sg-11134201-8261j-mknfzfn6169y76",
+        "result": "win",
+        "reason": "win",
+        "label": "Win"
+      }
+    ]
+  }
+}
